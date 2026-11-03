@@ -1,0 +1,26 @@
+name: Validar AulaReserva
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v7
+
+      - name: Validar estructura del proyecto
+        id: validar
+        uses: ./.github/actions/validar-aulareserva
+        with:
+          rutas: |
+            README.md
+            frontend/index.html
+            frontend/app.js
+            backend/public/index.php
+            .github/actions/validar-aulareserva/action.yml
+
+      - name: Mostrar resultado
+        run: echo "Se han verificado ${{ steps.validar.outputs.total }} rutas"
