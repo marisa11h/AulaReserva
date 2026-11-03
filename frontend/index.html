@@ -11,14 +11,38 @@
     </header>
 
     <main>
-        <section>
-            <h2>Aulas disponibles</h2>
-            <div id="aulas-container">
-                <p>Cargando aulas...</p>
-            </div>
-        </section>
-    </main>
+    <section>
+        <h2>Aulas disponibles</h2>
+        <div id="aulas-container">
+            <p>Cargando aulas...</p>
+        </div>
+    </section>
 
+    <section>
+        <h2>Solicitar reserva</h2>
+
+        <form id="form-reserva">
+            <label for="aula">Aula:</label>
+            <select id="aula" name="aula" required>
+                <option value="">Selecciona un aula</option>
+            </select>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="responsable">Responsable:</label>
+            <input type="text" id="responsable"
+                   name="responsable" required>
+
+            <button type="submit">Solicitar reserva</button>
+        </form>
+
+        <div id="mensaje"></div>
+    </section>
+</main>
     <script src="app.js"></script>
 </body>
 </html>
