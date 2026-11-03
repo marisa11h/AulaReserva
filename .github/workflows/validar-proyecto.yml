@@ -1,6 +1,15 @@
 name: Validar AulaReserva
 
 on:
+  push:
+    branches:
+      - develop
+      - 'feature/**'
+
+  pull_request:
+    branches:
+      - develop
+
   workflow_dispatch:
 
 jobs:
@@ -19,7 +28,7 @@ jobs:
             README.md
             frontend/index.html
             frontend/app.js
-            backend/index.php
+            backend/public/index.php
             .github/actions/validar-aulareserva/action.yml
 
       - name: Mostrar resultado
