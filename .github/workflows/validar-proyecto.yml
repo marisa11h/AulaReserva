@@ -19,7 +19,6 @@ jobs:
             README.md
             frontend/index.html
             frontend/app.js
-            frontend/hola.html
             backend/index.php
             .github/actions/validar-aulareserva/action.yml
 
